@@ -1,0 +1,15 @@
+= Time-Of-Use Tariff Octopus Dynamic GridBuy
+
+This bundle provides a Time-Of-Use GridBuy tariff implementation for the tariff dynamicOctopus from Octopus Energy.
+It fetches day-ahead and intraday price blocks from the Octopus Kraken GraphQL API and exposes them to OpenEMS.
+The implementation is based on the german documentation. Depending on their implementation it should run also for other countries (not tested).
+
+== Configuration
+
+The component requires these settings (This is necessary because the token expires every hour):
+
+- `email` - Octopus account login email
+- `password` - Octopus account login password (stored as password type)
+- `accountNumber` - Octopus account number, e.g. `A-01F24F4E`
+
+https://github.com/OpenEMS/openems/tree/develop/io.openems.edge.timeofusetariff.octopus[Source Code icon:github[]]
